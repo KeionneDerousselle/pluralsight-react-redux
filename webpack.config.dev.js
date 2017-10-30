@@ -35,7 +35,7 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new ExtractTextPlugin('styles.css'),
+    //new ExtractTextPlugin('styles.css'),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
@@ -48,7 +48,7 @@ module.exports = {
       { test: /\.js$/, include: path.join(__dirname, 'src'), use: 'babel-loader' },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin({
+        use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: 'css-loader'
         })

@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "scripts":{
+    "start": "babel-node tools/srcServer.js"
+  },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.0.0-beta.2",
@@ -56,9 +59,6 @@
     "webpack": "^3.8.1",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-hot-middleware": "^2.20.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"
