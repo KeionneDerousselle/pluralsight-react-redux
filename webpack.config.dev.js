@@ -35,11 +35,12 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    //new ExtractTextPlugin('styles.css'),
+    new ExtractTextPlugin('styles.css'),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
-      jquery: 'jquery'
+      jquery: 'jquery',
+      Popper: ['popper.js', 'default']
     })
   ],
 
