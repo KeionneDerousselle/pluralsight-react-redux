@@ -12,10 +12,13 @@ class Header extends React.Component {
           <li className="nav-item">
             <Link className="nav-link" to="/about">About</Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/courses">Courses</Link>
+          </li>
         </ul>
       </nav>
     );
   }
 }
-  
+
 export default Header;
