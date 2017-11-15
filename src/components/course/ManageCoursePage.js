@@ -22,20 +22,28 @@ class ManageCoursePage extends React.Component {
     return this.setState({course: course});
   };
 
+  saveCourse = event => {
+    event.preventDefault();
+    this.props.actions.saveCourse(this.state.course);
+  };
+
   render(){
     return (
       <CourseForm
         allAuthors={this.props.authors}
         course={this.state.course}
         errors={this.state.errors}
-        onChange={this.updateCourseState}/>
+        onChange={this.updateCourseState}
+        onSave={this.saveCourse}
+        errors={this.state.errors}/>
     );
   }
 }
 
 ManageCoursePage.propTypes = {
   course: PropTypes.object.isRequired,
-  authors: PropTypes.array.isRequired
+  authors: PropTypes.array.isRequired,
+  actions: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state, ownProps) => {
