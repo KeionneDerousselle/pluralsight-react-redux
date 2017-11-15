@@ -15,7 +15,7 @@ class CoursesPage extends React.Component{
 
     return(
       <div>
-        <h1>Courses</h1>
+        <h1 className="mb-4">Courses</h1>
         <CourseList courses={courses} />
       </div>
     );

@@ -5,7 +5,7 @@ import CourseListRow from './CourseListRow';
 const CourseList = ({courses, deleteCourse}) => {
   return(
     <table className="table">
-      <thead>
+      <thead className="thead-light">
         <tr>
           <th>&nbsp;</th>
           <th>Title</th>
@@ -15,7 +15,7 @@ const CourseList = ({courses, deleteCourse}) => {
         </tr>
       </thead>
       <tbody>
-        {courses.map(course => 
+        {courses.map(course =>
           <CourseListRow key={course.id} course={course} />
         )}
       </tbody>
