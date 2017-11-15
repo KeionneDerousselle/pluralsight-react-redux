@@ -5,12 +5,13 @@ import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
 import Routes from './routes';
 import { loadCourses } from './actions/courseActions';
-// import './styles/styles.css';
+import { loadAuthors } from './actions/authorActions';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const store = configureStore();
 store.dispatch(loadCourses());
+store.dispatch(loadAuthors());
 
 render(
   <Provider store={store}>
