@@ -1,0 +1,35 @@
+.progress-bar.indeterminate {
+  position: relative;
+  animation: progress-indeterminate 2.5s linear infinite;
+}
+
+@keyframes progress-indeterminate {
+   from { left: -25%; width: 40%; }
+   to { left: 100%; width: 40%;}
+}
+
+.indeterminate-circle-loader {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: 10px solid #f3f3f3;
+  border-radius: 100%;
+  border-top: 10px solid #007BFF;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
