@@ -8,15 +8,16 @@ export function loadAuthorsSuccess(authors){
 
 export function loadAuthors(){
   return dispatch => {
-    
+
     dispatch(beginAjaxRead());
-    
+
     return AuthorApi.getAllAuthors()
     .then(authors => {
       dispatch(loadAuthorsSuccess(authors));
       dispatch(endAjaxRead());
     })
     .catch(error => {
+      dispatch(ajaxCallError(error));
       throw(error);
     })
   }
